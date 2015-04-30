@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="TopNav_procurement.ascx.cs" Inherits="usercontrols_TopNav_procurement" %>
+<div class="topnav"><%--<a href="procurement_Home.aspx">Enter Authentication Ticket</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;--%><a href="procurement_VendorList.aspx">New Applicants</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="procurement_VendorListApproved.aspx">Approved Applicants</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">Manage Report</a></div>

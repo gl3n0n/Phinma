@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="EBidConnectionString">
+      <rd:DataSourceID>5f476469-cb5e-4381-a83b-6c1064e334e4</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+    <DataSource Name="EBidConnectionStringTrans">
+      <rd:DataSourceID>88ff731e-e376-4cd6-8e87-8b40bfd15fec</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="BidRefNo">
+      <DataType>Integer</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_0</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>1in</RightMargin>
+  <LeftMargin>1in</LeftMargin>
+  <BottomMargin>1in</BottomMargin>
+  <rd:ReportID>c7d00894-dc70-4b7f-b073-4cd3a2309960</rd:ReportID>
+  <EmbeddedImages>
+    <EmbeddedImage Name="innovelogo2">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>/9j/4AAQSkZJRgABAQEAlgCWAAD//gAcU29mdHdhcmU6IE1pY3Jvc29mdCBPZmZpY2X/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAqAHQDASIAAhEBAxEB/8QAGwAAAwEBAQEBAAAAAAAAAAAAAAEFBgQDAgf/xAAyEAABBAECBAMHAgcAAAAAAAABAAIDBBEFIQYSEzEUUWEHIjJBcYGRM0QVFkJiobHw/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAIBAwQF/8QAJREAAgECBgICAwAAAAAAAAAAAQIAAxEEEhMhMUEUUWFxI4GR/9oADAMBAAIRAxEAPwD9mSyhZXjq7YpVaToNb/hXPPgu6Jf1Nu2wPby7FUi5myyXbKt5qk1CscW6NQvyadbultqFoL29J25IB2wNyc9gvL+eNFZOyGy+zU6hwx1mq+Np+5C3Tf1J1U9zRIUS3xdotHUpNPs3DHYjaHFvTcc5AIAIG5OewXOeOdEjmZHZfaqB5w19mrJG0/chBTc9Rqp7mjSyuK/qLakbBG3qyy/A0fP1XOK+sSjndbZCT/QG5wvFUxIViiqWI5t1/bCdJWQpEd+3Tssr6g1pa84bK3t919abxFpuqXbFKtO7xNb9WKSMscN8dj3XWjVFYEqDtyOx9zCQDYyqhTdY1/TtCijk1Cx0xK7lY1rS5zj6AbrlucX6NSnbWksSPsuaD4eKF0kjfq0DY+hXcIx4Ekuo5MuIUKrxho1m2yo+eWrYk+CO1C6Eu+nMMFXAUZSvImqwbgxoQhTKiKwvtRhmmoaaIopJCLJJ5GF2Pd9FuXDmaRnGR3Ck2aranJm3cPUJAPVD
+QNs7k9lgqvScMq3/AHaRUTOpWZqlVkd7Xrs74H9MV8teWHGeRg2P5XZ7ToJJ+E+WKJ8jxYYQGtLiNj5KpZjjrENdaunLOf8AWAGPIE9z6BKcQ1uQGxqbi+PnAZkn0afInf8ABWeVWzq2nxbsdSNEZGW/MyuiVZT7Soppa8nK3T4yHuYcB3RYO/n3Vn2mQvn4Re2OJ8jhPGQGtLj8/JUrAhrhmbWoyB8fUb08uz5D6n5fQombBAGHxd89SMPZyv8AiyQMD137LTi6xdX0+PkTBQARkvzOauDVg0a1M1wjbVja4uHwnlHdaNj2vYHNIcD2I7KHZhgZLJXmlvvALAT8TXFxwP8Aim7T6tdljlkuAQEBwYe+QDt6b7/dfPTyEqOwTZjfnudwLC09dae2wYacXvzOeDgb8oUrivhyzJNFr+i5j1WoASG/uGgbtPmcfkbeS7jRq1a/imy2y5x5Q2Fwe5x8hhevh43PriOzee2wCWvEmA3AzuDurw5xFKq1Upubd7WEl0DrYyHw3o93XNTHFGvxlr/2VUg4ib8nYP8Aj8+ShadRn4b1i+zWbWqURPJzMu1GB8coyT7x5XEHfP8Atbh8MbInSGzewJjFvJjfzJ+Q9V8hkfh2ytn1Eh8vTwx+d/P1G3cL3DF17n8ex+ROJw4sN9xMlqbdN1ww04bnEGue+DiNjWtj/u5nMAC/RoGdOCNhLiWtAy85J2+fqosnRZSFrxV8xmQsxz4OxIzg/T6qpUpiuS4TzS8w7SOzhSa9RyAUsPsGdEp5Ln3OtCEKp0gkmhIiwjCaEiLCMJoSIsIwmhIiwjCaEiLCMJoSIsITQkQQhCRP/9k=</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="globelogo2">
+      <MIMEType>image/gif</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <DataSets>
+    <DataSet Name="dsBidTendersForPOFileImport_sp_GetBidTendersForPOFileImport">
+      <Fields>
+        <Field Name="ID0a">
+          <DataField>0a</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ID1a">
+          <DataField>1a</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ID2a">
+          <DataField>2a</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ID3a">
+          <DataField>3a</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ID4a">
+          <DataField>4a</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ID5a">
+          <DataField>5a</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ID6a">
+          <DataField>6a</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ID7a">
+          <DataField>7a</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ID8a">
+          <DataField>8a</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ID9a">
+          <DataField>9a</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ID10a">
+          <DataField>10a</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>EBidConnectionStringTrans</DataSourceName>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>dbo.sp_GetBidTendersForPOFileImport</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsBidTendersForPOFileImport</rd:DataSetName>
+        <rd:TableName>sp_GetBidTendersForPOFileImport</rd:TableName>
+        <rd:TableAdapterName>sp_GetBidTendersForPOFileImportTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Width>23.50002in</Width>
+  <Body>
+    <ReportItems>
+      <Table Name="table1">
+        <DataSetName>dsBidTendersForPOFileImport_sp_GetBidTendersForPOFileImport</DataSetName>
+        <Width>11in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ID1a">
+                      <rd:DefaultName>ID1a</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ID1a.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ID2a">
+                      <rd:DefaultName>ID2a</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ID2a.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ID3a">
+                      <rd:DefaultName>ID3a</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ID3a.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ID4a">
+                      <rd:DefaultName>ID4a</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ID4a.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ID5a">
+                      <rd:DefaultName>ID5a</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ID5a.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ID6a">
+                      <rd:DefaultName>ID6a</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ID6a.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ID7a">
+                      <rd:DefaultName>ID7a</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ID7a.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ID8a">
+                      <rd:DefaultName>ID8a</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ID8a.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ID9a">
+                      <rd:DefaultName>ID9a</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ID9a.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ID10a">
+                      <rd:DefaultName>ID10a</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ID10a.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <TableColumns>
+          <TableColumn>
+            <Width>0.25in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.25in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.5in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.25in</Height>
+      </Table>
+    </ReportItems>
+    <Height>6in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>

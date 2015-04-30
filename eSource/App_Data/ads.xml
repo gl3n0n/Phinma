@@ -1,0 +1,44 @@
+<Advertisements>
+  <Ad>
+    <ImageUrl>~/web/themes/images/ads/myglobe.jpg</ImageUrl>
+    <NavigateUrl>http://www.myglobe.com.ph</NavigateUrl>
+    <AlternateText>MyGlobe Home Page</AlternateText>
+    <Keyword></Keyword>
+    <Impressions></Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/web/themes/images/ads/globesolutions.gif</ImageUrl>
+    <NavigateUrl>http://www.globesolutions.com.ph</NavigateUrl>
+    <AlternateText>GlobeSolutions Home Page</AlternateText>
+    <Keyword></Keyword>
+    <Impressions></Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/web/themes/images/ads/globecorpsite.gif</ImageUrl>
+    <NavigateUrl>http://www1.Trans-Asia.com.ph/</NavigateUrl>
+    <AlternateText>Trans-Asia CorpSite Home Page</AlternateText>
+    <Keyword></Keyword>
+    <Impressions></Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/web/themes/images/ads/globeplatinum.gif</ImageUrl>
+    <NavigateUrl>http://www.globeplatinum.com.ph/</NavigateUrl>
+    <AlternateText>Trans-Asia Platinum Home Page</AlternateText>
+    <Keyword></Keyword>
+    <Impressions></Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/web/themes/images/ads/touchmobile.gif</ImageUrl>
+    <NavigateUrl>http://www.touchmobile.com.ph/</NavigateUrl>
+    <AlternateText>Touch Mobile Home Page</AlternateText>
+    <Keyword></Keyword>
+    <Impressions></Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/web/themes/images/ads/.gif</ImageUrl>
+    <NavigateUrl>http://www..com.ph/</NavigateUrl>
+    <AlternateText> Home Page</AlternateText>
+    <Keyword></Keyword>
+    <Impressions></Impressions>
+  </Ad>  
+</Advertisements>

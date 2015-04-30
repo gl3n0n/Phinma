@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="TopNav_vmissue.ascx.cs" Inherits="usercontrols_TopNav_vmissue" %>
+<div class="topnav"><a href="vmissue_VendorList.aspx">Vendors for Review</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="vmissue_VendorListApproved.aspx">Approved Vendors</a><%--&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">Manage Report</a>--%></div>

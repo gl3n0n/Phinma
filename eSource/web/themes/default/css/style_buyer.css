@@ -1,0 +1,66 @@
+.tabs 
+{	
+	
+	height: 38px;	
+	vertical-align: middle;	
+	text-align: center;	
+	background-color:#000000;
+	width: 150px;
+}
+
+.tabs td:hover 
+{
+	color: #fde453;		
+}
+
+.tabs a 
+{	
+				
+	color: #ffffff;	
+	font-weight: bold;
+	font-size: 14px;	
+	padding: 12px;	
+	width: 150px;
+	display:block;
+}
+
+.tabs a:hover 
+{
+	
+	font-size: 12px;
+	color: #fde453;	
+}
+
+.activeTab 
+{		
+		
+	height: 38px;	
+	width: 150px;
+	text-align: center;
+	color: #fde453;
+
+}
+.activeTab a 
+{
+		
+	font-weight: bold;
+	font-size: 14px;
+	padding: 12px;	
+	color: #fde453;	
+	display:block;
+  width: 150px;
+}
+
+.activeTab a:hover 
+{	
+	color: #ffffff;	
+	border-top: #778899;
+}
+
+.topnav 
+{
+	/*border-bottom-width: 7px;*/
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+  width: 100%;
+}

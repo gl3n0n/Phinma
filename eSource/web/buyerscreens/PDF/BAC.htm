@@ -1,0 +1,593 @@
+<!-- Bid Details --><h1>Bid Awarding Checklist</h1><br><br>
+<table width="100%" border="1" cellpadding="2" cellspacing="0">
+	<tbody>
+		<tr>
+			<td colspan="4" valign="middle"><h1>&nbsp;BID DETAILS</h1></td>
+		</tr>
+		<tr valign="middle" >
+			<td colspan="2" align="center" valign="middle"><h2>Bid Reference No.</h2></td>
+			<td colspan="2" align="center" valign="middle"><h2>Bid Events Description</h2></td>
+		</tr>
+		<tr valign="middle" >
+			<td colspan="2" align="center" valign="middle">
+				<h1>[BidRefNo]</h1>
+			</td>
+			<td colspan="2" align="center" valign="middle">
+				<p>[ItemDesc]</p>
+			</td>
+		</tr>
+		<tr valign="middle">
+			<td align="center" valign="middle"><h2>SAP PR No.</h2></td>
+			<td align="center" valign="middle"><h2>Amount</h2></td>
+			<td align="center" valign="middle"><h2>SAP PR Date</h2></td>
+			<td align="center" valign="middle"><h2>Date Received</h2></td>
+		</tr>
+		<tr valign="middle">
+			<td align="center" valign="middle">
+				<p>[SAPPRNo]</p>
+			</td>
+			<td align="center" valign="middle">
+				<p>[BidAmount]</p>
+			</td>
+			<td align="center" valign="middle">
+				<p>[SAPPRDate]</p>
+			</td>
+			<td align="center" valign="middle">
+				<p>[PreparedDt]</p>
+			</td>
+		</tr>
+		<tr valign="middle">
+			<td colspan="2" align="center" valign="middle">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td colspan="2"><p>[Budgeted]</p></td>
+					</tr>
+				</table>
+			</td>
+			<td colspan="2" align="center" valign="middle">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td colspan="4"><p>[CompanyId]</p></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<!-- Executive Summary -->
+<table width="100%" border="1" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td><h1>&nbsp;EXECUTIVE SUMMARY</h1></td>
+		</tr>
+		<tr valign="middle" >
+			<td><p>[ExecSummary]</p></td>
+		</tr>
+	</tbody>
+</table>
+
+<!-- Remarks/Comments -->
+<table width="100%" border="1" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td><h1>&nbsp;REMARKS / COMMENTS</h1></td>
+		</tr>
+		<tr valign="middle" >
+			<td><p>[RemComments]</p></td>
+		</tr>
+	</tbody>
+</table>
+
+<table width="100%" border="1" cellpadding="0" cellspacing="0">
+	<tr>
+		<!-- Supply Position -->
+		<td valign="top">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" valign="top">
+				<tbody>
+					<tr>
+						<td>
+							<table border="1" cellpadding="0" cellspacing="0"><tr><td>
+								<h1>&nbsp;SUPPLY POSITION</h1>
+							</td></tr></table>
+						</td>
+					</tr>
+					<tr>
+						<td valign="middle" style="width:25%;">
+							<p>[SupplyPosition]</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+		
+		<td valign="top"><!-- Sourcing Strategy -->
+			<table width="100%" border="1" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr>
+						<td>
+							<table border="1" cellpadding="0" cellspacing="0"><tr><td>
+								<h1>&nbsp;SOURCING STRATEGY</h1>
+							</td></tr></table>
+						</td>
+					</tr>
+					<tr>
+						<td style="width:50%;">
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="50%" valign="top" style="border:none; display:block; ">
+										<p>[SourcingStrategy]</p>
+									</td>
+									<td style="border:none" width="50%">
+										<table>
+											<tr>
+												<td><h2>&nbsp;No. of Invited Bidders:&nbsp;[SS_Nobidders]</h2></td>
+											</tr>
+											<tr>
+												<td><h2>&nbsp;No. of Bids Received:&nbsp;[SS_NoBidsRcvd]</h2></td>
+											</tr>
+											<tr>
+												<td><h2>&nbsp;Tech. Compliance:&nbsp;[SS_TechCompliance]</h2></td>
+											</tr>
+											<tr>
+												<td><h2>&nbsp;CRC No.:&nbsp;[SS_crc_no]</h2></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<table width="100%" border="1" cellpadding="0" cellspacing="0">
+	<tr>
+		<!-- Type of Purchase -->
+		<td valign="top">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" valign="top">
+				<tbody>
+					<tr>
+						<td>
+							<table border="1" cellpadding="0" cellspacing="0"><tr><td>
+								<h1>&nbsp;TYPE OF PURCHASE</h1>
+							</td></tr></table>
+						</td>
+					</tr>
+					<tr>
+						<td valign="middle" style="width:25%;">
+							<p>[TypeOfPurchase]</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+		<!-- Payment Terms -->
+		<td>
+			<table width="100%" border="1" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr>
+						<td>
+							<table border="1" cellpadding="0" cellspacing="0"><tr><td>
+								<h1>&nbsp;PAYMENT TERMS</h1>
+							</td></tr></table>
+						</td>
+					</tr>
+					<tr>
+						<td style="width:50%;">
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="50%" valign="top" style="border:none; display:block; ">
+										<p>[PaymentTerms]</p>
+									</td>
+									<td style="border:none" width="50%">
+										<table>
+											<tr>
+												<td><h2>&nbsp;[PaymentTermsDesc]</h2></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<table width="100%" border="1" cellpadding="0" cellspacing="0">
+	<tr>
+		<!-- Supporting Documents Attached -->
+		<td valign="top">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" valign="top">
+				<tbody>
+					<tr>
+						<td>
+							<table border="1" cellpadding="0" cellspacing="0"><tr><td>
+								<h1>&nbsp;SUPPORTING DOCUMENTS ATTACHED</h1>
+							</td></tr></table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>&nbsp;Approved SAP PR</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>[ApprovedSAPPR]</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>&nbsp;Approved Business Case</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>[ApprovedBusinessCase]</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>&nbsp;Board Resolution</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>[BoardResolution]</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>&nbsp;Commercial Evaluation</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>[CommercialEvaluation]</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>&nbsp;Negotiation Results</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>[NegotiationResults]</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>&nbsp;Technical Evaluation</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>[TechnicalEvaluation]</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>&nbsp;Others</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>[Others]</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+		<!-- Basis for Awarding -->
+		<td valign="top">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" valign="top">
+				<tbody>
+					<tr>
+						<td>
+							<table border="1" cellpadding="0" cellspacing="0"><tr><td>
+								<h1>&nbsp;BASIS FOR AWARDING</h1>
+							</td></tr></table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>&nbsp;Lowest-Price Bidder</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>[LowestPriceBidder]</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>&nbsp;Sole Source w/ LOA Approved Waiver of Competition</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>[SoleSourceLOA]</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>&nbsp;Sole Source w/ Certificate of Sole Distributorship</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>[SoleSourceCertificate]</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>&nbsp;Compliance to Technical/ Functional Specifications</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>[ComplianceTechnicalFunctional]</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>&nbsp;Compliance to Delivery Lead-Time</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>[ComplianceDelivery]</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>&nbsp;Others</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>[Others1]</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>&nbsp;</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<!-- Bid Evaluation Summary -->
+<table width="100%" border="1" cellpadding="0" cellspacing="0">
+	<tr>
+		<td valign="top">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" valign="top">
+				<tbody>
+					<tr>
+						<td>
+							<p>
+								<table border="1" cellpadding="0" cellspacing="0"><tr><td>
+									<h1>&nbsp;BID EVALUATION SUMMARY</h1>
+								</td></tr></table>
+								<table border="0" cellpadding="0" cellspacing="0">
+									[BidEvaluationSummary]
+								</table>
+							</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<!-- Items -->
+<table width="100%" border="1" cellpadding="0" cellspacing="0">
+	<tr>
+		<td valign="top">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" valign="top">
+				<tbody>
+					<tr>
+						<td>
+							<p>
+								<table border="1" cellpadding="0" cellspacing="0"><tr><td>
+									<h1>&nbsp;ITEMS</h1>
+								</td></tr></table>
+								<table border="1" cellpadding="0" cellspacing="0">
+									[BidEvalItems]
+								</table>
+							</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<!-- Items -->
+<table width="100%" border="1" cellpadding="0" cellspacing="0">
+	<tr>
+		<td valign="top">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" valign="top">
+				<tbody>
+					<tr>
+						<td>
+							<p>
+								<table border="1" cellpadding="0" cellspacing="0"><tr><td>
+									<h1>&nbsp;COMMERCIAL DETAIL</h1>
+								</td></tr></table>
+								<table border="1" cellpadding="0" cellspacing="0">
+									[BidCommercialDetail]
+								</table>
+							</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<!-- Awarded To -->
+<table width="100%" border="1" cellpadding="0" cellspacing="0">
+	<tr>
+		<td valign="top">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" valign="top">
+				<tbody>
+					<tr>
+						<td>
+							<p>
+								<table border="1" cellpadding="0" cellspacing="0"><tr><td>
+									<h1>&nbsp;AWARDED TO</h1>
+								</td></tr></table>
+								<table border="1" cellpadding="0" cellspacing="0">
+									[BidAwardedTo]
+								</table>
+							</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<table width="100%" border="1" cellpadding="0" cellspacing="0">
+	<tr>
+		<!-- Nature of Savings -->
+		<td valign="top">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" valign="top">
+				<tbody>
+					<tr>
+						<td>
+							<table border="1" cellpadding="0" cellspacing="0"><tr><td>
+								<h1>&nbsp;NATURE OF SAVINGS</h1>
+							</td></tr></table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>[NatureOfSavings]</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+		<!-- Savings Generated -->
+		<td valign="top">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" valign="top">
+				<tbody>
+					<tr>
+						<td>
+							<table border="1" cellpadding="0" cellspacing="0"><tr><td>
+								<h1>&nbsp;SAVINGS GENERATED</h1>
+							</td></tr></table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td>
+										<p>&nbsp;Accumulated Award Cost:</p>
+									</td>
+									<td>
+										<h2>&nbsp;[AccumulatedCost]</h2>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<p>&nbsp;Savings Amount:</p>
+									</td>
+									<td>
+										<h2>&nbsp;[SavingsAmount]</h2>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<p>&nbsp;% Savings:</p>
+									</td>
+									<td>
+										<h2>&nbsp;[PercentSavings]</h2>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<!-- Purchasing -->
+<table width="100%" border="1" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="2">
+			<table border="1" cellpadding="0" cellspacing="0"><tr><td>
+				<h1>&nbsp;PURCHASING</h1>
+			</td></tr></table>
+		</td>
+	</tr>
+	<tr>
+		<!-- Prepared By -->
+		<td>
+			<p>
+				&nbsp;Prepared by / Date:<br /><br />
+				<h2>&nbsp;[PreparedBy]</h2>
+				&nbsp;[PreparedDate]<br />
+				&nbsp;Buyer
+			</p>
+		</td>
+		<!-- Purchasing Approver -->
+		<td>
+			<p>
+				&nbsp;Reviewed By / Date:<br /><br />
+				<h2>&nbsp;[ReviewedBy]</h2>
+				&nbsp;[ReviewedDt]<br />
+				&nbsp;Purchasing Approver
+			</p>
+		</td>
+	</tr>
+</table>
+
+<!-- Approver -->
+<table width="100%" border="1" cellpadding="0" cellspacing="0">
+	<tr>
+		<td valign="top">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" valign="top">
+				<tbody>
+					<tr>
+						<td>
+							<p>
+								<table border="1" cellpadding="0" cellspacing="0"><tr><td>
+									<h1>&nbsp;BID APPROVING AUTHORITY</h1>
+								</td></tr></table>
+								<table border="1" cellpadding="0" cellspacing="0">
+									[BacApprovers]
+								</table>
+							</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+</table>

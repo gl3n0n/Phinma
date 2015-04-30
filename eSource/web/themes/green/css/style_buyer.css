@@ -1,0 +1,74 @@
+.tabs 
+{	
+	background-image: url(../images/TabBG.jpg);
+	background-repeat: repeat-x;	
+	border-right: solid 3px #fff;	
+	height: 38px;	
+	vertical-align: middle;	
+	text-align: center;	
+	background-color: #B1B1B1;
+	width: 150px;
+}
+
+.tabs td:hover 
+{
+	background-image: url(../images/TabBGhover.jpg);
+	background-repeat:repeat-x;		
+}
+
+.tabs a 
+{	
+	background-image: url(../images/TabBG.jpg);
+	background-repeat: repeat-x;			
+	color: #ffffff;	
+	font-weight: bold;
+	font-size: 11px;	
+	padding: 12px;	
+	width: 150px;
+	display:block;
+}
+
+.tabs a:hover 
+{
+	background-image: url(../images/TabBGhover.jpg);
+	background-repeat:repeat-x;
+	font-size: 11px;
+	color: #000000;	
+}
+
+.activeTab 
+{		
+	background-image: url(../images/TabBGactive.jpg);
+	background-repeat: repeat-x;			
+	border-right: solid 3px #fff;	
+	height: 38px;	
+	width: 150px;
+	text-align: center;
+	background-color: #2fb307;
+}
+.activeTab a 
+{
+	background-image: url(../images/TabBGactive.jpg);
+	background-repeat: repeat-x;	
+	color: #ffffff;	
+	font-weight: bold;
+	font-size: 11px;
+	padding: 12px;	
+	background-color: #2fb307
+	display:block;
+  width: 150px;
+}
+
+.activeTab a:hover 
+{	
+	color: #ffffff;	
+	border-top: #778899;
+}
+
+.topnav 
+{
+	border-bottom-width: 7px;
+	border-bottom-color: #2fb307;
+	border-bottom-style: solid;
+  width: 100%;
+}

@@ -1,0 +1,74 @@
+﻿<%@ Register TagPrefix="Ava" TagName="Headnav" Src="usercontrols/loggedin.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><asp:ContentPlaceHolder id="TitlePlaceHolder1" runat="server">Trans-Asia VMS Accreditation</asp:ContentPlaceHolder></title>
+<script type="text/javascript" src="Scripts/jquery-latest.min.js"></script>
+<link href="Styles/ava_pages.css" rel="stylesheet" type="text/css" media="screen" />
+ 
+	<script type="text/javascript">
+	    $(document).ready(function () {
+	        //background:url(images/calendar_icon1.png) no-repeat center right;
+	        //$(".date").css('background-image', 'url(images/calendar_icon1.png)');
+	        //$(".date").parent().css('background-image', 'url(images/calendar_icon1.png)');
+	        //$("input.date").parent().css({ 'background-image': "url(images/calendar_icon1.png)", 'background-repeat': 'no-repeat', 'background-position': 'right top' });
+	        //$("input.date").parent().css({ 'padding-right': "25px" });
+	        //$("input.date").parent().css({ 'margin-right': "5px" });
+	        //$(".date").parent().css('backgroundRepeat', 'no-repeat');
+	    });
+	</script>
+ <link rel="stylesheet" href="Styles/colorbox.css" />
+ <script type="text/javascript" src="Scripts/jquery.colorbox-min.js"></script> 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".iframe").colorbox({ iframe: true, width: "970", height: "80%" });
+        });
+		</script>  
+</head>
+
+<body>
+<div class="wrapper">
+<div class="header">
+<div class="header_inner">
+<div class="header_search">
+<div style="margin-top:5px; width:950px;">
+  <Ava:Headnav ID="Headnav" runat="server" />
+  </div>
+  </div>
+</div>
+</div><!-- header ends -->  
+
+ 
+<noscript>
+    <div style="background:#f00; text-align:center; color:#fff; font-size:12px; font-weight:bold; padding:10px;">
+        Javascript is disabled! For full functionality of site it is necessary to enable JavaScript.
+        </div>
+</noscript>
+<div style="text-align:center; color:#fff; font-size:12px; font-weight:bold; ">
+    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="1" height="1" id="movie_name" align="middle">
+    <param name="movie" value="plugins/uploadify/expressInstall.swf"/>
+    <!--[if !IE]>-->
+    <object type="application/x-shockwave-flash" data="plugins/uploadify/expressInstall.swf" width="1" height="1">
+        <param name="movie" value="plugins/uploadify/expressInstall.swf"/>
+    <!--<![endif]-->
+        <a href="http://www.adobe.com/go/getflash">
+            <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player"/>
+        </a><br />Flash player is not installed or enabled on your browser.
+    <!--[if !IE]>-->
+    </object>
+    <!--<![endif]-->
+</object>
+</div>
+<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+</asp:ContentPlaceHolder>
+<div class="clearfix"></div> 
+<div class="push"></div> 
+</div><!-- wrapper ends -->
+<div class="footer">
+<div style="margin:auto; width:790px; padding-top:15px; margin-top:15px; text-align:center" >
+    11th Floor, PHINMA Plaza, 39 Plaza Drive, Rockwell Center, Makati City, 1200, Philippines | Tel: +63 2 8700100 | Fax: +63 2 8700484
+</div>
+</div><!-- footer ends -->
+</body>
+</html>

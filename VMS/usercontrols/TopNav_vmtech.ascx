@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="TopNav_vmtech.ascx.cs" Inherits="usercontrols_TopNav_vmtech" %>
+<div class="topnav"><a href="vmtech_VendorList.aspx">Vendors for Review</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="vmtech_VendorListApproved.aspx">Approved Vendors</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">Manage Report</a></div>

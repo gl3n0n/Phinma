@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="EBidConnectionString">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>202ff11f-04bf-4c56-b2c0-3c775cb12a3b</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>1in</BottomMargin>
+  <RightMargin>1in</RightMargin>
+  <ReportParameters>
+    <ReportParameter Name="AuctionRefNo">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>AuctionRefNo</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="IsExternal">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>IsExternal</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:GridSpacing>0.05in</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ReportItems>
+      <List Name="list1">
+        <Filters>
+          <Filter>
+            <Operator>Equal</Operator>
+            <FilterValues>
+              <FilterValue>=Parameters!AuctionRefNo.Value</FilterValue>
+            </FilterValues>
+            <FilterExpression>=Fields!AuctionRefNo.Value.ToString()</FilterExpression>
+          </Filter>
+        </Filters>
+        <ReportItems>
+          <Line Name="line1">
+            <Top>1.7in</Top>
+            <ZIndex>13</ZIndex>
+            <Width>5.8in</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+            </Style>
+            <Height>0in</Height>
+          </Line>
+          <Textbox Name="textbox4">
+            <Left>0.05in</Left>
+            <Top>1.3in</Top>
+            <ZIndex>12</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>Currency</Value>
+          </Textbox>
+          <Textbox Name="textbox5">
+            <Left>0.05in</Left>
+            <Top>1.05in</Top>
+            <ZIndex>11</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>Category</Value>
+          </Textbox>
+          <Textbox Name="textbox6">
+            <Left>0.05in</Left>
+            <Top>0.8in</Top>
+            <ZIndex>10</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>End Date and Time</Value>
+          </Textbox>
+          <Textbox Name="textbox10">
+            <Left>0.05in</Left>
+            <Top>0.55in</Top>
+            <ZIndex>9</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>Start Date and Time</Value>
+          </Textbox>
+          <Textbox Name="textbox11">
+            <Left>0.05in</Left>
+            <Top>0.3in</Top>
+            <ZIndex>8</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>Auction Type</Value>
+          </Textbox>
+          <Textbox Name="textbox12">
+            <Left>0.05in</Left>
+            <Top>0.05in</Top>
+            <ZIndex>7</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>Description</Value>
+          </Textbox>
+          <Textbox Name="Currency">
+            <Left>1.425in</Left>
+            <Top>1.3in</Top>
+            <rd:DefaultName>Currency</rd:DefaultName>
+            <ZIndex>6</ZIndex>
+            <Width>4.375in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>=":   " &amp; First(Fields!Currency.Value)</Value>
+          </Textbox>
+          <Textbox Name="Category">
+            <Left>1.425in</Left>
+            <Top>1.05in</Top>
+            <rd:DefaultName>Category</rd:DefaultName>
+            <ZIndex>5</ZIndex>
+            <Width>4.375in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>=":   " &amp; First(Fields!CategoryName.Value)</Value>
+          </Textbox>
+          <Textbox Name="AuctionEndDateTime">
+            <Left>1.425in</Left>
+            <Top>0.8in</Top>
+            <rd:DefaultName>AuctionEndDateTime</rd:DefaultName>
+            <ZIndex>4</ZIndex>
+            <Width>4.375in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>=":   " &amp; Format(First(Fields!AuctionEndDateTime.Value),"MMMM dd yyyy") &amp; 
+" "
+&amp;
+Format(First(Fields!AuctionEndDateTime.Value),"HH:mm:ss tt")</Value>
+          </Textbox>
+          <Textbox Name="AuctionStartDateTime">
+            <Left>1.425in</Left>
+            <Top>0.55in</Top>
+            <rd:DefaultName>AuctionStartDateTime</rd:DefaultName>
+            <ZIndex>3</ZIndex>
+            <Width>4.375in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>=":   " &amp; Format(First(Fields!AuctionStartDateTime.Value),"MMMM dd yyyy") &amp; 
+" "
+&amp;
+Format(First(Fields!AuctionStartDateTime.Value),"HH:mm:ss tt")</Value>
+          </Textbox>
+          <Textbox Name="AuctionType">
+            <Left>1.425in</Left>
+            <Top>0.3in</Top>
+            <rd:DefaultName>AuctionType</rd:DefaultName>
+            <ZIndex>2</ZIndex>
+            <Width>4.375in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>=":   " &amp; First(Fields!AuctionType.Value)</Value>
+          </Textbox>
+          <Textbox Name="Description">
+            <Left>1.425in</Left>
+            <Top>0.05in</Top>
+            <rd:DefaultName>Description</rd:DefaultName>
+            <ZIndex>1</ZIndex>
+            <Width>4.375in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>=":   " &amp; First(Fields!ItemDesc.Value)</Value>
+          </Textbox>
+          <List Name="list2">
+            <ReportItems>
+              <Table Name="Mintable">
+                <Footer>
+                  <TableRows>
+                    <TableRow>
+                      <TableCells>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox22">
+                              <ZIndex>5</ZIndex>
+                              <Style>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontSize>8pt</FontSize>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value />
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox23">
+                              <ZIndex>4</ZIndex>
+                              <Style>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontSize>8pt</FontSize>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value />
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox24">
+                              <ZIndex>3</ZIndex>
+                              <Style>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontSize>8pt</FontSize>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value />
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                      </TableCells>
+                      <Height>0.29167in</Height>
+                    </TableRow>
+                  </TableRows>
+                </Footer>
+                <Left>0.05in</Left>
+                <Top>2.2in</Top>
+                <ZIndex>10</ZIndex>
+                <Visibility>
+                  <Hidden>=
+iif
+(
+	Fields!AuctionType.Value = "Reverse Auction",
+	false,
+	true
+)</Hidden>
+                </Visibility>
+                <Details>
+                  <TableRows>
+                    <TableRow>
+                      <TableCells>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox25">
+                              <ZIndex>2</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <TextAlign>Center</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontSize>8pt</FontSize>
+                                <BackgroundColor>=iif((rownumber("Mintable") mod 2) = 0,"White","Gainsboro")</BackgroundColor>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>=
+iif
+(
+UCase(Parameters!IsExternal.Value) = UCase("true"),
+"BIDDER_" &amp; CStr(Fields!VendorsInAuctionId.Value * Fields!AuctionRefNo.Value),
+Fields!VendorName.Value &amp; " " &amp; "(BIDDER_" &amp; CStr(Fields!VendorsInAuctionId.Value * Fields!AuctionRefNo.Value) &amp; ")"
+)</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox26">
+                              <ZIndex>1</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <TextAlign>Center</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontSize>8pt</FontSize>
+                                <BackgroundColor>=iif((rownumber("Mintable") mod 2) = 0,"White","Gainsboro")</BackgroundColor>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>=Format(Fields!Bid.Value,"N")</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox27">
+                              <Style>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <TextAlign>Center</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontSize>8pt</FontSize>
+                                <BackgroundColor>=iif((rownumber("Mintable") mod 2) = 0,"White","Gainsboro")</BackgroundColor>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>=Format(Fields!DateSubmitted.Value,"MMMM dd yyyy") &amp; 
+vbcrlf 
+&amp;
+Format(Fields!DateSubmitted.Value,"HH:mm:ss tt")</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                      </TableCells>
+                      <Height>0.29167in</Height>
+                    </TableRow>
+                  </TableRows>
+                  <Sorting>
+                    <SortBy>
+                      <SortExpression>=Fields!Bid.Value</SortExpression>
+                      <Direction>Ascending</Direction>
+                    </SortBy>
+                  </Sorting>
+                </Details>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <Header>
+                  <TableRows>
+                    <TableRow>
+                      <TableCells>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox28">
+                              <ZIndex>8</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <TextAlign>Center</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontWeight>700</FontWeight>
+                                <FontSize>8pt</FontSize>
+                                <TextDecoration>Underline</TextDecoration>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>Vendor Name</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox29">
+                              <ZIndex>7</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <TextAlign>Center</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontWeight>700</FontWeight>
+                                <FontSize>8pt</FontSize>
+                                <TextDecoration>Underline</TextDecoration>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>Bid</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox30">
+                              <ZIndex>6</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <TextAlign>Center</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontWeight>700</FontWeight>
+                                <FontSize>8pt</FontSize>
+                                <TextDecoration>Underline</TextDecoration>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>Date Submitted</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                      </TableCells>
+                      <Height>0.29167in</Height>
+                    </TableRow>
+                  </TableRows>
+                </Header>
+                <TableColumns>
+                  <TableColumn>
+                    <Width>2.48295in</Width>
+                  </TableColumn>
+                  <TableColumn>
+                    <Width>1.4375in</Width>
+                  </TableColumn>
+                  <TableColumn>
+                    <Width>1.82955in</Width>
+                  </TableColumn>
+                </TableColumns>
+                <Height>0.87501in</Height>
+              </Table>
+              <Textbox Name="textbox21">
+                <Left>0.05in</Left>
+                <Top>0.075in</Top>
+                <ZIndex>9</ZIndex>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontWeight>700</FontWeight>
+                  <FontSize>8pt</FontSize>
+                  <TextDecoration>Underline</TextDecoration>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>=Fields!Description.Value</Value>
+              </Textbox>
+              <Textbox Name="textbox19">
+                <Left>0.925in</Left>
+                <Top>1.075in</Top>
+                <ZIndex>8</ZIndex>
+                <Visibility>
+                  <Hidden>true</Hidden>
+                </Visibility>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>8pt</FontSize>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>=":   "</Value>
+              </Textbox>
+              <Textbox Name="textbox20">
+                <Left>0.925in</Left>
+                <Top>0.825in</Top>
+                <ZIndex>7</ZIndex>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>8pt</FontSize>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>=":   " &amp; 
+iif
+(
+	Fields!AuctionType.Value = "Reverse Auction",
+	Format(Min(Fields!Bid.Value),"N"),
+	Format(Max(Fields!Bid.Value),"N")
+)</Value>
+              </Textbox>
+              <Textbox Name="textbox14">
+                <Left>0.925in</Left>
+                <Top>0.575in</Top>
+                <ZIndex>6</ZIndex>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>8pt</FontSize>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>=":   " &amp; Format(Fields!IncrementDecrement.Value,"N")</Value>
+              </Textbox>
+              <Textbox Name="textbox13">
+                <Left>0.925in</Left>
+                <Top>0.325in</Top>
+                <ZIndex>5</ZIndex>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>8pt</FontSize>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>=":   " &amp; Format(Fields!StartingPrice.Value,"N")</Value>
+              </Textbox>
+              <Textbox Name="textbox15">
+                <Left>0.05in</Left>
+                <Top>1.075in</Top>
+                <ZIndex>4</ZIndex>
+                <Visibility>
+                  <Hidden>true</Hidden>
+                </Visibility>
+                <Width>0.875in</Width>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>8pt</FontSize>
+                  <Color>DimGray</Color>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>=
+iif
+(
+	Fields!AuctionType.Value = "Reverse Auction",
+	"Lowest Bidder",
+	"Highest Bidder"
+)</Value>
+              </Textbox>
+              <Textbox Name="textbox16">
+                <Left>0.05in</Left>
+                <Top>0.825in</Top>
+                <ZIndex>3</ZIndex>
+                <Width>0.875in</Width>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>8pt</FontSize>
+                  <Color>DimGray</Color>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>=
+iif
+(
+	Fields!AuctionType.Value = "Reverse Auction",
+	"Lowest Bid",
+	"Highest Bid"
+)</Value>
+              </Textbox>
+              <Textbox Name="textbox17">
+                <Left>0.05in</Left>
+                <Top>0.575in</Top>
+                <ZIndex>2</ZIndex>
+                <Width>0.875in</Width>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>8pt</FontSize>
+                  <Color>DimGray</Color>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>=
+iif
+(
+	Fields!AuctionType.Value = "Reverse Auction",
+	"Decrement",
+	"Increment"
+)</Value>
+              </Textbox>
+              <Textbox Name="textbox18">
+                <Left>0.05in</Left>
+                <Top>0.325in</Top>
+                <ZIndex>1</ZIndex>
+                <Width>0.875in</Width>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>8pt</FontSize>
+                  <Color>DimGray</Color>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>Starting Price</Value>
+              </Textbox>
+              <Table Name="Maxtable">
+                <Footer>
+                  <TableRows>
+                    <TableRow>
+                      <TableCells>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox7">
+                              <rd:DefaultName>textbox7</rd:DefaultName>
+                              <ZIndex>5</ZIndex>
+                              <Style>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontSize>8pt</FontSize>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value />
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox8">
+                              <rd:DefaultName>textbox8</rd:DefaultName>
+                              <ZIndex>4</ZIndex>
+                              <Style>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontSize>8pt</FontSize>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value />
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox9">
+                              <rd:DefaultName>textbox9</rd:DefaultName>
+                              <ZIndex>3</ZIndex>
+                              <Style>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontSize>8pt</FontSize>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value />
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                      </TableCells>
+                      <Height>0.29167in</Height>
+                    </TableRow>
+                  </TableRows>
+                </Footer>
+                <Left>0.05in</Left>
+                <Top>1.325in</Top>
+                <Visibility>
+                  <Hidden>=
+iif
+(
+	Fields!AuctionType.Value = "Reverse Auction",
+	true,
+	false
+)</Hidden>
+                </Visibility>
+                <Details>
+                  <TableRows>
+                    <TableRow>
+                      <TableCells>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="VendorName">
+                              <rd:DefaultName>VendorName</rd:DefaultName>
+                              <ZIndex>2</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <TextAlign>Center</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontSize>8pt</FontSize>
+                                <BackgroundColor>=iif((rownumber("Maxtable") mod 2) = 0,"White","Gainsboro")</BackgroundColor>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>=
+iif
+(
+UCase(Parameters!IsExternal.Value) = UCase("true"),
+"BIDDER_" &amp; CStr(Fields!VendorsInAuctionId.Value * Fields!AuctionRefNo.Value),
+Fields!VendorName.Value &amp; " " &amp; "(BIDDER_" &amp; CStr(Fields!VendorsInAuctionId.Value * Fields!AuctionRefNo.Value) &amp; ")"
+)</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="Bid">
+                              <rd:DefaultName>Bid</rd:DefaultName>
+                              <ZIndex>1</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <TextAlign>Center</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontSize>8pt</FontSize>
+                                <BackgroundColor>=iif((rownumber("Maxtable") mod 2) = 0,"White","Gainsboro")</BackgroundColor>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>=Format(Fields!Bid.Value,"N")</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="DateSubmitted">
+                              <rd:DefaultName>DateSubmitted</rd:DefaultName>
+                              <Style>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <TextAlign>Center</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontSize>8pt</FontSize>
+                                <BackgroundColor>=iif((rownumber("Maxtable") mod 2) = 0,"White","Gainsboro")</BackgroundColor>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>=Format(Fields!DateSubmitted.Value,"MMMM dd yyyy") &amp; 
+vbcrlf 
+&amp;
+Format(Fields!DateSubmitted.Value,"HH:mm:ss tt")</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                      </TableCells>
+                      <Height>0.29167in</Height>
+                    </TableRow>
+                  </TableRows>
+                  <Sorting>
+                    <SortBy>
+                      <SortExpression>=Fields!Bid.Value</SortExpression>
+                      <Direction>Descending</Direction>
+                    </SortBy>
+                  </Sorting>
+                </Details>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <Header>
+                  <TableRows>
+                    <TableRow>
+                      <TableCells>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox1">
+                              <rd:DefaultName>textbox1</rd:DefaultName>
+                              <ZIndex>8</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <TextAlign>Center</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontWeight>700</FontWeight>
+                                <FontSize>8pt</FontSize>
+                                <TextDecoration>Underline</TextDecoration>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>Vendor Name</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox2">
+                              <rd:DefaultName>textbox2</rd:DefaultName>
+                              <ZIndex>7</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <TextAlign>Center</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontWeight>700</FontWeight>
+                                <FontSize>8pt</FontSize>
+                                <TextDecoration>Underline</TextDecoration>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>Bid</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox3">
+                              <rd:DefaultName>textbox3</rd:DefaultName>
+                              <ZIndex>6</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <TextAlign>Center</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontWeight>700</FontWeight>
+                                <FontSize>8pt</FontSize>
+                                <TextDecoration>Underline</TextDecoration>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>Date Submitted</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                      </TableCells>
+                      <Height>0.29167in</Height>
+                    </TableRow>
+                  </TableRows>
+                </Header>
+                <TableColumns>
+                  <TableColumn>
+                    <Width>2.48295in</Width>
+                  </TableColumn>
+                  <TableColumn>
+                    <Width>1.4375in</Width>
+                  </TableColumn>
+                  <TableColumn>
+                    <Width>1.82955in</Width>
+                  </TableColumn>
+                </TableColumns>
+                <Height>0.87501in</Height>
+              </Table>
+            </ReportItems>
+            <DataSetName>dsReportAuctionItemDetail_sp_ReportAuctionItemDetail</DataSetName>
+            <Top>1.7in</Top>
+            <Width>5.8in</Width>
+            <Grouping Name="list2_Details_Group">
+              <Parent>=Fields!AuctionDetailNo.Value</Parent>
+              <GroupExpressions>
+                <GroupExpression>=Fields!AuctionDetailNo.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+            <Height>3.12501in</Height>
+          </List>
+        </ReportItems>
+        <DataSetName>dsReportAuctionItemDetail_sp_ReportAuctionItemDetail</DataSetName>
+        <Grouping Name="list1_Details_Group">
+          <Parent>=Fields!AuctionRefNo.Value</Parent>
+          <GroupExpressions>
+            <GroupExpression>=Fields!AuctionRefNo.Value</GroupExpression>
+          </GroupExpressions>
+        </Grouping>
+      </List>
+    </ReportItems>
+    <Height>4.87501in</Height>
+  </Body>
+  <rd:ReportID>e4708f0d-9974-46e6-87f5-ba87aedc33a3</rd:ReportID>
+  <LeftMargin>1in</LeftMargin>
+  <DataSets>
+    <DataSet Name="dsReportAuctionItemDetail_sp_ReportAuctionItemDetail">
+      <rd:DataSetInfo>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:DataSetName>dsReportAuctionItemDetail</rd:DataSetName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterName>sp_ReportAuctionItemDetailTableAdapter</rd:TableAdapterName>
+        <rd:TableName>sp_ReportAuctionItemDetail</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>dbo.sp_ReportAuctionItemDetail</CommandText>
+        <DataSourceName>EBidConnectionString</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="AuctionRefNo">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AuctionRefNo</DataField>
+        </Field>
+        <Field Name="AuctionDetailNo">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>AuctionDetailNo</DataField>
+        </Field>
+        <Field Name="Category">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Category</DataField>
+        </Field>
+        <Field Name="Item">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Item</DataField>
+        </Field>
+        <Field Name="Description">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="Quantity">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>Quantity</DataField>
+        </Field>
+        <Field Name="UnitOfMeasure">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>UnitOfMeasure</DataField>
+        </Field>
+        <Field Name="StartingPrice">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>StartingPrice</DataField>
+        </Field>
+        <Field Name="IncrementDecrement">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>IncrementDecrement</DataField>
+        </Field>
+        <Field Name="ItemDesc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemDesc</DataField>
+        </Field>
+        <Field Name="Requestor">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Requestor</DataField>
+        </Field>
+        <Field Name="CompanyId">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>CompanyId</DataField>
+        </Field>
+        <Field Name="Company">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Company</DataField>
+        </Field>
+        <Field Name="AuctionType">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>AuctionType</DataField>
+        </Field>
+        <Field Name="AuctionDeadline">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>AuctionDeadline</DataField>
+        </Field>
+        <Field Name="AuctionStartDateTime">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>AuctionStartDateTime</DataField>
+        </Field>
+        <Field Name="AuctionEndDateTime">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>AuctionEndDateTime</DataField>
+        </Field>
+        <Field Name="BuyerId">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>BuyerId</DataField>
+        </Field>
+        <Field Name="Buyer">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Buyer</DataField>
+        </Field>
+        <Field Name="Currency">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Currency</DataField>
+        </Field>
+        <Field Name="CategoryName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CategoryName</DataField>
+        </Field>
+        <Field Name="Bid">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Bid</DataField>
+        </Field>
+        <Field Name="DateSubmitted">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>DateSubmitted</DataField>
+        </Field>
+        <Field Name="VendorName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>VendorName</DataField>
+        </Field>
+        <Field Name="VendorId">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>VendorId</DataField>
+        </Field>
+        <Field Name="VendorsInAuctionId">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>VendorsInAuctionId</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>5.85in</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>

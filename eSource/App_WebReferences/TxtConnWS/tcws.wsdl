@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://txtconnect.globesolutions.com.ph/webservices/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://txtconnect.globesolutions.com.ph/webservices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://txtconnect.globesolutions.com.ph/webservices/">
+      <s:element name="ValidateUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="org" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMessageList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="recipients" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="smsc_from" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cmts" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="delivery_sched" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMessageListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendMessageListResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ValidateUserSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateUser" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageListSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMessageList" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageListSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMessageListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="org" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageListHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="recipients" type="s:string" />
+    <wsdl:part name="message" type="s:string" />
+    <wsdl:part name="smsc_from" type="s:string" />
+    <wsdl:part name="cmts" type="s:string" />
+    <wsdl:part name="delivery_sched" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageListHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="org" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageListHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+    <wsdl:part name="recipients" type="s:string" />
+    <wsdl:part name="message" type="s:string" />
+    <wsdl:part name="smsc_from" type="s:string" />
+    <wsdl:part name="cmts" type="s:string" />
+    <wsdl:part name="delivery_sched" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageListHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:portType name="TCWSSoap">
+    <wsdl:operation name="ValidateUser">
+      <wsdl:input message="tns:ValidateUserSoapIn" />
+      <wsdl:output message="tns:ValidateUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessageList">
+      <wsdl:input message="tns:SendMessageListSoapIn" />
+      <wsdl:output message="tns:SendMessageListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TCWSHttpGet">
+    <wsdl:operation name="ValidateUser">
+      <wsdl:input message="tns:ValidateUserHttpGetIn" />
+      <wsdl:output message="tns:ValidateUserHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessageList">
+      <wsdl:input message="tns:SendMessageListHttpGetIn" />
+      <wsdl:output message="tns:SendMessageListHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TCWSHttpPost">
+    <wsdl:operation name="ValidateUser">
+      <wsdl:input message="tns:ValidateUserHttpPostIn" />
+      <wsdl:output message="tns:ValidateUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessageList">
+      <wsdl:input message="tns:SendMessageListHttpPostIn" />
+      <wsdl:output message="tns:SendMessageListHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TCWSSoap" type="tns:TCWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidateUser">
+      <soap:operation soapAction="http://txtconnect.globesolutions.com.ph/webservices/ValidateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessageList">
+      <soap:operation soapAction="http://txtconnect.globesolutions.com.ph/webservices/SendMessageList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TCWSHttpGet" type="tns:TCWSHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="ValidateUser">
+      <http:operation location="/ValidateUser" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessageList">
+      <http:operation location="/SendMessageList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TCWSHttpPost" type="tns:TCWSHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="ValidateUser">
+      <http:operation location="/ValidateUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessageList">
+      <http:operation location="/SendMessageList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TCWS">
+    <wsdl:port name="TCWSSoap" binding="tns:TCWSSoap">
+      <soap:address location="http://10.225.80.74:81/tcwebservice/tcws.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TCWSHttpGet" binding="tns:TCWSHttpGet">
+      <http:address location="http://10.225.80.74:81/tcwebservice/tcws.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TCWSHttpPost" binding="tns:TCWSHttpPost">
+      <http:address location="http://10.225.80.74:81/tcwebservice/tcws.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

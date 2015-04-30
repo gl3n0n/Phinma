@@ -1,0 +1,69 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="privatemaster.master.cs"
+	Inherits="publicmaster" %>
+<%@ Register Src="usercontrol/Footer.ascx" TagName="Footer" TagPrefix="EBid" %>
+<%@ Register TagPrefix="EBid" TagName="Login_TopNav" Src="~/web/usercontrol/Login_TopNav.ascx" %>
+<html xmlns="http://www.w3.org/1999/xhtml" style="height: 100%;">
+<head runat="server">
+	<title></title>
+	<meta http-equiv="Content-Language" content="en-us" />
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+	<link rel="stylesheet" type="text/css" href="themes/<%= HttpContext.Current.Session['configTheme'].ToString() %>/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="themes/<%= HttpContext.Current.Session['configTheme'].ToString() %>/css/style_front.css" />
+
+</head>
+<body style="height: 100%;">
+	<div>
+		<form id="form1" runat="server">			
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%" id="page">
+				<tr valign="top" height="100px">
+					<td>
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tr>
+								<td>
+									<div align="left" id="masthead">
+										<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table1">
+											<tr>
+												<td width="100%">
+													<h1>
+														<img border="0" src='clients/<%= HttpContext.Current.Session["clientid"] %>/images/logo.jpg' alt="" ></h1>
+													<br />
+												</td>
+											</tr>
+										</table>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table2">
+										<tr>
+											<td class="tabs" width="20%">
+												<asp:LinkButton runat="server" ID="lnkHome" CausesValidation="false" OnClick="lnkHome_Click">Home</asp:LinkButton></td>
+											<td class="tabs" width="20%">
+												<asp:LinkButton ID="lnkAbout" runat="server" CausesValidation="false" PostBackUrl="~/about.aspx">About</asp:LinkButton></td>
+											<td class="tabs" width="20%">
+												<asp:LinkButton ID="lnkHelp" runat="server" CausesValidation="false" PostBackUrl="~/help.aspx">Help</asp:LinkButton></td>
+											<td class="tabs" width="20%">
+												<asp:LinkButton ID="lnkFAQs" runat="server" CausesValidation="false" PostBackUrl="~/faqs.aspx">FAQs</asp:LinkButton></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr height="100%">
+					<td class="content" valign="top">
+						<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+						</asp:ContentPlaceHolder>
+					</td>
+				</tr>
+				<tr height="50px">
+					<td id="footer" align="left"><EBid:Footer runat="server" id="footer" />					
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="publicmaster.master.cs" Inherits="publicmaster" %>
+<%@ Register Src="usercontrol/Footer.ascx" TagName="Footer" TagPrefix="EBid" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<title></title>
+	<meta http-equiv="Content-Language" content="en-us" />
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/style_front.css" />
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<script type="text/javascript" src="include/login.js"></script>
+	<script type="text/javascript" src="include/util.js"></script>	
+</head>
+<body onload="Focus();SetStatus();">
+	<div>
+		<form id="form1" runat="server" autocomplete="off">
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%" id="page">
+				<tr valign="top" height="100px">
+					<td>
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tr>
+								<td>
+									<div align="left" id="masthead">
+										<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table1" style="background-color:#000">
+											<tr>
+												<td align="center" width="150px" style="background-color:#000; padding:10px;">
+                                                    <asp:Image ID="LogoImg" runat="server"  ImageUrl="/images/logo.JPG" />
+													<%--<img border="0" src='<%=  "http://compserver/clients/" + HttpContext.Current.Session["clientid"] + "/images/logo.jpg" %>' >--%>
+												</td>
+												<td>
+													&nbsp;
+												</td>
+                                                </tr>
+										</table>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table2" style="display:none;">
+										<tr>
+											<td class="tabs">
+												<asp:HyperLink ID="lnkHome" runat="server">Home</asp:HyperLink>												
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr height="100%">
+					<td class="content" valign="top">
+						<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+						</asp:ContentPlaceHolder>
+					</td>
+				</tr>
+				<tr height="50px">
+					<td id="footer" align="left">
+						<EBid:Footer runat="server" ID="footer1" />
+					</td>
+				</tr>
+			</table>
+		</form>		
+	</div>
+</body>
+</html>

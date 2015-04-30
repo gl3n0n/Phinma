@@ -1,0 +1,45 @@
+
+.tabs a {
+	display: visible;
+	background-image: url(../images/TabBGactive.jpg);
+	background-repeat: repeat-x;	
+	width: 100%;
+	color: #ffffff;	
+	font-weight: bold;
+	font-size: 11px;
+	padding: 10px;
+	background-color: #E0DFE3;
+	border-right: solid 1px #fff;
+	border-top: solid 1px gray;
+	border-bottom: solid 3px #fff;
+	display:block;
+}
+.tabs a:hover {
+	background-image: url(../images/TabBGhover.jpg);
+	background-repeat:repeat-x;
+	font-size: 11px;
+	width: 100%;
+	color: #000000;
+	padding: 10px;
+	background-color: #778899;
+}
+.activeTab a {
+	background-image: url(../images/TabBG.jpg);
+	/*background-image: url(../images/TabBGactive.jpg);*/
+	background-repeat: repeat-x;
+	width: 100%;
+	color: #fff;
+	font-weight: bold;
+	padding: 10px;
+	background-color: #3399CC;
+	border-top: #778899;
+	width:auto;
+}
+.activeTab a:hover {
+	background-image: url(../images/TabBGactive.jpg);
+	background-repeat: repeat-x;
+	background-color: #3399cc;
+	width: 100%;
+	color: #ffffff;
+	padding: 10px;
+	border-top: #778899;

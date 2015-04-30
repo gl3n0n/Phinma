@@ -1,0 +1,41 @@
+<%--
+   Created By: GA S. 060606
+   Last Update By: GA S. 083006
+--%>
+
+<asp:GridView SKINID="AuctionEvents" runat="server" 
+		Width="100%"
+		CssClass="pageDetails" 
+		BorderColor="Gainsboro" 
+		BorderStyle="Solid" BorderWidth="1px">
+	<HeaderStyle CssClass="pageDetails_th" BorderColor="White" Height="22px" ForeColor="white" HorizontalAlign="Center" />	
+	<RowStyle	CssClass="pageDetails_td" BorderColor="WhiteSmoke" Height="20px" VerticalAlign="Top" HorizontalAlign="Center" />
+	<AlternatingRowStyle CssClass="evenCells" BorderColor="White" VerticalAlign="Top" HorizontalAlign="Center" />	
+	<PagerSettings Mode="NumericFirstLast" />		
+	<EmptyDataRowStyle HorizontalAlign="Center" Height="30px"/> 									
+</asp:GridView>
+
+
+<asp:GridView SKINID="AuctionedItems" runat="server" 
+		Width="100%" 
+		Font-Names="Arial" Font-Size="11px" 										
+		BorderWidth="2px" BorderColor="#DFDFDF">
+	<HeaderStyle HorizontalAlign="Left" BackColor="#10659E" ForeColor="White" />																				
+</asp:GridView>
+
+
+<asp:DetailsView SKINID="EventDetails" runat="server" 
+		Width="100%"
+		Font-Names="Arial" Font-Size="11px"
+		EmptyDataText="Details not available." AutoGenerateRows="False"
+		BorderWidth="2" BorderColor="#DFDFDF">
+	<FieldHeaderStyle BackColor="#DBEAF5" BorderWidth="2px" Width="155px" />
+	<HeaderStyle BackColor="#10659E" Font-Bold="True" Font-Size="12px" ForeColor="White" />
+	<RowStyle BorderWidth="2px" Wrap="False" />
+</asp:DetailsView>
+
+<asp:Calendar SKINID="Calendar" runat="server" 
+    TodayDayStyle-ForeColor="red"
+    Height="104px" Width="185px" Font-Size="11px">
+    <TodayDayStyle ForeColor="Red" />
+</asp:Calendar>

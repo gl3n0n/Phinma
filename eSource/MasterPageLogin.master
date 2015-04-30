@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageLogin.master.cs" Inherits="MasterPageLogin" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="height: 100%;">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><asp:ContentPlaceHolder id="TitlePlaceHolder1" runat="server">e-Sourcing Administration</asp:ContentPlaceHolder></title>
+<script type="text/javascript" src="Scripts/jquery-1.5.1.js"></script>
+<link href="Styles/ebid.css" rel="stylesheet" type="text/css" media="screen" />
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="web/include/login.js"></script>
+    <script type="text/javascript" src="web/include/util.js"></script>
+</head>
+
+<body onload="Focus();SetStatus();">
+    <table style="width: 100%; background:url(images/topbg.jpg) repeat-x -10px -18px" height="100%" cellpadding="0" cellspacing ="0" border="0">
+        <tr>
+            <td valign="top" style=""><div class="wrapper">
+<div class="header" style="background-color: #67893f; height:1px; ">
+<div class="header_inner" style="background-color: #67893f">
+<div class="header_search">
+  <%--<img src="images/search.jpg" width="208" height="27" />--%></div>
+</div>
+</div><!-- header ends -->  
+
+<form id="form1" runat="server" autocomplete="off">
+<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+
+</asp:ContentPlaceHolder>
+    <br /><br /><br /><br /><br />
+</form>
+<div class="push"></div> 
+</div><!-- wrapper ends --></td>
+        </tr>
+        <tr>
+            <td valign="bottom" style="height:75px; background-color:#333333; "><div class="footer" style="height:75px;background:url(images/footer_txt.png) no-repeat center center; padding:0px;">
+<div style="margin:auto; width:790px;  margin-top:0px; background-color:#333333;" >
+<%--&nbsp;<asp:Label ID="Label111" runat="server" Text="Label" style="font-size:8px;">&nbsp</asp:Label>--%>
+    <div style="padding:30px 0px; color:#fff; font-size:10px; text-align:center; background-color:#333333;">11th Floor, PHINMA Plaza, 39 Plaza Drive, Rockwell Center, Makati City, 1200, Philippines | Tel:+63 2 8700100 | Fax: +63 2 8700484</div>
+</div>
+</div><!-- footer ends --></td>
+        </tr>
+    </table>
+
+
+
+</body>
+</html>

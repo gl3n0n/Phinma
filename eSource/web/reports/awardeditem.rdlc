@@ -1,0 +1,1238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="EBidConnectionString">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>475881de-45db-40c2-9d54-8af0dff4f1b1</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>1in</BottomMargin>
+  <RightMargin>1in</RightMargin>
+  <ReportParameters>
+    <ReportParameter Name="BidDetailNo">
+      <DataType>Integer</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_0</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:GridSpacing>0.03in</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ReportItems>
+      <List Name="list1">
+        <Left>0.1in</Left>
+        <Filters>
+          <Filter>
+            <Operator>Equal</Operator>
+            <FilterValues>
+              <FilterValue>=Parameters!BidDetailNo.Value</FilterValue>
+            </FilterValues>
+            <FilterExpression>=Fields!BidDetailNo.Value</FilterExpression>
+          </Filter>
+        </Filters>
+        <ReportItems>
+          <Textbox Name="DeliverTo">
+            <Left>1.65in</Left>
+            <Top>2.3375in</Top>
+            <rd:DefaultName>DeliverTo</rd:DefaultName>
+            <ZIndex>58</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Fields!DeliverTo.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox28">
+            <Left>0.2in</Left>
+            <Top>2.3375in</Top>
+            <ZIndex>57</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Deliver To :</Value>
+          </Textbox>
+          <Textbox Name="textbox27">
+            <Left>0.2in</Left>
+            <Top>2.11042in</Top>
+            <ZIndex>56</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Incoterm :</Value>
+          </Textbox>
+          <Textbox Name="Incoterm">
+            <Left>1.65in</Left>
+            <Top>2.11042in</Top>
+            <rd:DefaultName>Incoterm</rd:DefaultName>
+            <ZIndex>55</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Fields!Incoterm.Value</Value>
+          </Textbox>
+          <Textbox Name="Currency">
+            <Left>1.65in</Left>
+            <Top>1.89917in</Top>
+            <rd:DefaultName>Currency</rd:DefaultName>
+            <ZIndex>54</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Fields!Currency.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox26">
+            <Left>0.2in</Left>
+            <Top>1.89917in</Top>
+            <ZIndex>53</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Currency :</Value>
+          </Textbox>
+          <Textbox Name="textbox25">
+            <Left>0.2in</Left>
+            <Top>1.67875in</Top>
+            <ZIndex>52</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Event Creator :</Value>
+          </Textbox>
+          <Textbox Name="textbox24">
+            <Left>0.2in</Left>
+            <Top>1.46042in</Top>
+            <ZIndex>51</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Company :</Value>
+          </Textbox>
+          <Textbox Name="EventCreator">
+            <Left>1.65in</Left>
+            <Top>1.67875in</Top>
+            <rd:DefaultName>EventCreator</rd:DefaultName>
+            <ZIndex>50</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Fields!EventCreator.Value</Value>
+          </Textbox>
+          <Textbox Name="Company">
+            <Left>1.65in</Left>
+            <Top>1.46042in</Top>
+            <rd:DefaultName>Company</rd:DefaultName>
+            <ZIndex>49</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Fields!Company.Value</Value>
+          </Textbox>
+          <Textbox Name="Requestor">
+            <Left>1.65in</Left>
+            <Top>1.24375in</Top>
+            <rd:DefaultName>Requestor</rd:DefaultName>
+            <ZIndex>48</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Fields!Requestor.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox23">
+            <Left>0.2in</Left>
+            <Top>1.24375in</Top>
+            <ZIndex>47</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Requestor :</Value>
+          </Textbox>
+          <Textbox Name="VendorEmail">
+            <Left>1.65in</Left>
+            <Top>6.78in</Top>
+            <rd:DefaultName>VendorEmail</rd:DefaultName>
+            <ZIndex>46</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Fields!VendorEmail.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox22">
+            <Left>0.2in</Left>
+            <Top>6.78in</Top>
+            <ZIndex>45</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>  Vendor Email Address  :</Value>
+          </Textbox>
+          <Textbox Name="Fax">
+            <Left>1.65in</Left>
+            <Top>6.56083in</Top>
+            <rd:DefaultName>Fax</rd:DefaultName>
+            <ZIndex>44</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Fields!Fax.Value</Value>
+          </Textbox>
+          <Textbox Name="MobileNo">
+            <Left>1.65in</Left>
+            <Top>6.35083in</Top>
+            <rd:DefaultName>MobileNo</rd:DefaultName>
+            <ZIndex>43</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Fields!MobileNo.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox21">
+            <Left>0.2in</Left>
+            <Top>6.56083in</Top>
+            <ZIndex>42</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>  Vendor Fax No.  :</Value>
+          </Textbox>
+          <Textbox Name="textbox20">
+            <Left>0.2in</Left>
+            <Top>6.35083in</Top>
+            <ZIndex>41</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>  Vendor Mobile No.  :</Value>
+          </Textbox>
+          <Textbox Name="TelephoneNo">
+            <Left>1.65in</Left>
+            <Top>6.12667in</Top>
+            <rd:DefaultName>TelephoneNo</rd:DefaultName>
+            <ZIndex>40</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Fields!TelephoneNo.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox19">
+            <Left>0.2in</Left>
+            <Top>6.12667in</Top>
+            <ZIndex>39</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>  Vendor Telephone No.  :</Value>
+          </Textbox>
+          <Textbox Name="textbox18">
+            <Left>0.2in</Left>
+            <Top>5.91in</Top>
+            <ZIndex>38</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>  Vendor Address :</Value>
+          </Textbox>
+          <Textbox Name="VendorAddress">
+            <Left>1.65in</Left>
+            <Top>5.91in</Top>
+            <rd:DefaultName>VendorAddress</rd:DefaultName>
+            <ZIndex>37</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Fields!VendorAddress.Value</Value>
+          </Textbox>
+          <Textbox Name="VendorName">
+            <Left>1.65in</Left>
+            <Top>5.69083in</Top>
+            <rd:DefaultName>VendorName</rd:DefaultName>
+            <ZIndex>36</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Fields!VendorName.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox17">
+            <Left>0.2in</Left>
+            <Top>5.69083in</Top>
+            <ZIndex>35</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>  Winning Bidder/Vendor :</Value>
+          </Textbox>
+          <Textbox Name="textbox16">
+            <Left>0.2in</Left>
+            <Top>5.47292in</Top>
+            <ZIndex>34</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Date Awarded :</Value>
+          </Textbox>
+          <Textbox Name="DateAwarded">
+            <Left>1.65in</Left>
+            <Top>5.47292in</Top>
+            <rd:DefaultName>DateAwarded</rd:DefaultName>
+            <ZIndex>33</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=FormatDateTime(Fields!DateAwarded.Value, DateFormat.LongDate) &amp; "  " &amp;  FormatDateTime(Fields!DateAwarded.Value, DateFormat.LongTime)</Value>
+          </Textbox>
+          <Textbox Name="textbox15">
+            <Left>0.2in</Left>
+            <Top>5.25in</Top>
+            <ZIndex>32</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Remarks :</Value>
+          </Textbox>
+          <Textbox Name="Remarks">
+            <Left>1.65in</Left>
+            <Top>5.25in</Top>
+            <rd:DefaultName>Remarks</rd:DefaultName>
+            <ZIndex>31</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Fields!Remarks.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox14">
+            <Left>0.2in</Left>
+            <Top>5.03958in</Top>
+            <ZIndex>30</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Warranty :</Value>
+          </Textbox>
+          <Textbox Name="Warranty">
+            <Left>1.65in</Left>
+            <Top>5.03958in</Top>
+            <rd:DefaultName>Warranty</rd:DefaultName>
+            <ZIndex>29</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Fields!Warranty.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox2">
+            <Left>0.2in</Left>
+            <Top>4.81167in</Top>
+            <ZIndex>28</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Total Bid Price :</Value>
+          </Textbox>
+          <Textbox Name="textbox1">
+            <Left>0.2in</Left>
+            <Top>3.93708in</Top>
+            <ZIndex>27</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Tender No. :</Value>
+          </Textbox>
+          <Textbox Name="textbox13">
+            <Left>0.2in</Left>
+            <Top>4.60167in</Top>
+            <ZIndex>26</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Delivery Cost :</Value>
+          </Textbox>
+          <Textbox Name="textbox12">
+            <Left>0.2in</Left>
+            <Top>4.3825in</Top>
+            <ZIndex>25</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Discount :</Value>
+          </Textbox>
+          <Textbox Name="Discount">
+            <Left>1.65in</Left>
+            <Top>4.3825in</Top>
+            <rd:DefaultName>Discount</rd:DefaultName>
+            <ZIndex>24</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <Color>Red</Color>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Format(Fields!Discount.Value, "#,##0.00")</Value>
+          </Textbox>
+          <Textbox Name="DeliveryCost">
+            <Left>1.65in</Left>
+            <Top>4.60167in</Top>
+            <rd:DefaultName>DeliveryCost</rd:DefaultName>
+            <ZIndex>23</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Format(Fields!DeliveryCost.Value, "#,##0.00")</Value>
+          </Textbox>
+          <Textbox Name="Amount">
+            <Left>1.65in</Left>
+            <Top>4.16208in</Top>
+            <rd:DefaultName>Amount</rd:DefaultName>
+            <ZIndex>22</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Format(Fields!Amount.Value, "#,##0.00")</Value>
+          </Textbox>
+          <Textbox Name="textbox11">
+            <Left>0.2in</Left>
+            <Top>4.16208in</Top>
+            <ZIndex>21</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Item Bid Price :</Value>
+          </Textbox>
+          <Line Name="line4">
+            <Top>7.42208in</Top>
+            <ZIndex>20</ZIndex>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <BorderWidth>
+                <Default>2pt</Default>
+              </BorderWidth>
+            </Style>
+            <Height>0in</Height>
+          </Line>
+          <Line Name="line3">
+            <Top>7.29708in</Top>
+            <ZIndex>19</ZIndex>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <BorderWidth>
+                <Default>2pt</Default>
+              </BorderWidth>
+            </Style>
+            <Height>0in</Height>
+          </Line>
+          <Line Name="line2">
+            <Top>0.6in</Top>
+            <ZIndex>18</ZIndex>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <BorderWidth>
+                <Default>2pt</Default>
+              </BorderWidth>
+            </Style>
+            <Height>0in</Height>
+          </Line>
+          <Textbox Name="textbox10">
+            <Left>2.075in</Left>
+            <Top>0.25in</Top>
+            <rd:DefaultName>textbox10</rd:DefaultName>
+            <ZIndex>17</ZIndex>
+            <Width>2.25in</Width>
+            <Style>
+              <TextAlign>Center</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>14pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>Awarded Bid Item</Value>
+          </Textbox>
+          <Line Name="line1">
+            <Top>3.82208in</Top>
+            <ZIndex>16</ZIndex>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <BorderColor>
+                <Default>DimGray</Default>
+              </BorderColor>
+            </Style>
+            <Height>0in</Height>
+          </Line>
+          <Textbox Name="textbox9">
+            <Left>0.2in</Left>
+            <Top>2.54875in</Top>
+            <ZIndex>15</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Delivery Date :</Value>
+          </Textbox>
+          <Textbox Name="DeliveryDate">
+            <Left>1.65in</Left>
+            <Top>2.54875in</Top>
+            <rd:DefaultName>DeliveryDate</rd:DefaultName>
+            <ZIndex>14</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=FormatDateTime(Fields!DeliveryDate.Value, DateFormat.LongDate)</Value>
+          </Textbox>
+          <Textbox Name="textbox8">
+            <Left>0.2in</Left>
+            <Top>3.42917in</Top>
+            <ZIndex>13</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Unit of Measure :</Value>
+          </Textbox>
+          <Textbox Name="UnitOfMeasure">
+            <Left>1.65in</Left>
+            <Top>3.42917in</Top>
+            <rd:DefaultName>UnitOfMeasure</rd:DefaultName>
+            <ZIndex>12</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Fields!UnitOfMeasure.Value</Value>
+          </Textbox>
+          <Textbox Name="Qty">
+            <Left>1.65in</Left>
+            <Top>3.21in</Top>
+            <rd:DefaultName>Qty</rd:DefaultName>
+            <ZIndex>11</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Format(Fields!Qty.Value, "#,##0")</Value>
+          </Textbox>
+          <Textbox Name="textbox7">
+            <Left>0.2in</Left>
+            <Top>3.21in</Top>
+            <ZIndex>10</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Quantity :</Value>
+          </Textbox>
+          <Textbox Name="DetailDesc">
+            <Left>1.65in</Left>
+            <Top>2.99458in</Top>
+            <rd:DefaultName>DetailDesc</rd:DefaultName>
+            <ZIndex>9</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Fields!DetailDesc.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox6">
+            <Left>0.2in</Left>
+            <Top>2.99458in</Top>
+            <ZIndex>8</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Bid Item Description :</Value>
+          </Textbox>
+          <Textbox Name="textbox5">
+            <Left>0.2in</Left>
+            <Top>2.76917in</Top>
+            <ZIndex>7</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Detail No. :</Value>
+          </Textbox>
+          <Textbox Name="textbox4">
+            <Left>0.2in</Left>
+            <Top>1.01667in</Top>
+            <rd:DefaultName>textbox4</rd:DefaultName>
+            <ZIndex>6</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Bid Event Description :</Value>
+          </Textbox>
+          <Textbox Name="ItemDesc">
+            <Left>1.65in</Left>
+            <Top>1.01667in</Top>
+            <rd:DefaultName>ItemDesc</rd:DefaultName>
+            <ZIndex>5</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Fields!ItemDesc.Value</Value>
+          </Textbox>
+          <Textbox Name="BidRefNo">
+            <Left>1.65in</Left>
+            <Top>0.8in</Top>
+            <rd:DefaultName>BidRefNo</rd:DefaultName>
+            <ZIndex>4</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Fields!BidRefNo.Value</Value>
+          </Textbox>
+          <Textbox Name="BidDetailNo">
+            <Left>1.65in</Left>
+            <Top>2.76917in</Top>
+            <rd:DefaultName>BidDetailNo</rd:DefaultName>
+            <ZIndex>3</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Fields!BidDetailNo.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox3">
+            <Left>0.2in</Left>
+            <Top>0.8in</Top>
+            <rd:DefaultName>textbox3</rd:DefaultName>
+            <ZIndex>2</ZIndex>
+            <Width>1.375in</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>Reference No. :</Value>
+          </Textbox>
+          <Textbox Name="BidPrice">
+            <Left>1.65in</Left>
+            <Top>4.81167in</Top>
+            <rd:DefaultName>BidPrice</rd:DefaultName>
+            <ZIndex>1</ZIndex>
+            <Width>4.575in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Format(Fields!BidPrice.Value, "#,##0.00")</Value>
+          </Textbox>
+          <Textbox Name="BidTenderNo">
+            <Left>1.65in</Left>
+            <Top>3.93708in</Top>
+            <rd:DefaultName>BidTenderNo</rd:DefaultName>
+            <Width>4.575in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <FontSize>8pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.2in</Height>
+            <Value>=Fields!BidTenderNo.Value</Value>
+          </Textbox>
+        </ReportItems>
+        <DataSetName>dsAwardedItem_sp_GetAwardedItemReportDetails</DataSetName>
+        <Top>0.1in</Top>
+        <Width>6.4in</Width>
+        <Style>
+          <BackgroundColor>White</BackgroundColor>
+        </Style>
+        <Height>7.55in</Height>
+      </List>
+    </ReportItems>
+    <Height>7.8in</Height>
+    <Style>
+      <BackgroundColor>White</BackgroundColor>
+    </Style>
+  </Body>
+  <rd:ReportID>f52a84ad-c8e5-4d57-9aa1-1504ce1495c1</rd:ReportID>
+  <LeftMargin>1in</LeftMargin>
+  <EmbeddedImages>
+    <EmbeddedImage Name="innovelogo2">
+      <ImageData>/9j/4AAQSkZJRgABAQEAlgCWAAD//gAcU29mdHdhcmU6IE1pY3Jvc29mdCBPZmZpY2X/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAqAHQDASIAAhEBAxEB/8QAGwAAAwEBAQEBAAAAAAAAAAAAAAEFBgQDAgf/xAAyEAABBAECBAMHAgcAAAAAAAABAAIDBBEFIQYSEzEUUWEHIjJBcYGRM0QVFkJiobHw/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAIBAwQF/8QAJREAAgECBgICAwAAAAAAAAAAAQIAAxEEEhMhMUEUUWFxI4GR/9oADAMBAAIRAxEAPwD9mSyhZXjq7YpVaToNb/hXPPgu6Jf1Nu2wPby7FUi5myyXbKt5qk1CscW6NQvyadbultqFoL29J25IB2wNyc9gvL+eNFZOyGy+zU6hwx1mq+Np+5C3Tf1J1U9zRIUS3xdotHUpNPs3DHYjaHFvTcc5AIAIG5OewXOeOdEjmZHZfaqB5w19mrJG0/chBTc9Rqp7mjSyuK/qLakbBG3qyy/A0fP1XOK+sSjndbZCT/QG5wvFUxIViiqWI5t1/bCdJWQpEd+3Tssr6g1pa84bK3t919abxFpuqXbFKtO7xNb9WKSMscN8dj3XWjVFYEqDtyOx9zCQDYyqhTdY1/TtCijk1Cx0xK7lY1rS5zj6AbrlucX6NSnbWksSPsuaD4eKF0kjfq0DY+hXcIx4Ekuo5MuIUKrxho1m2yo+eWrYk+CO1C6Eu+nMMFXAUZSvImqwbgxoQhTKiKwvtRhmmoaaIopJCLJJ5GF2Pd9FuXDmaRnGR3Ck2aranJm3cPUJAPVD
+QNs7k9lgqvScMq3/AHaRUTOpWZqlVkd7Xrs74H9MV8teWHGeRg2P5XZ7ToJJ+E+WKJ8jxYYQGtLiNj5KpZjjrENdaunLOf8AWAGPIE9z6BKcQ1uQGxqbi+PnAZkn0afInf8ABWeVWzq2nxbsdSNEZGW/MyuiVZT7Soppa8nK3T4yHuYcB3RYO/n3Vn2mQvn4Re2OJ8jhPGQGtLj8/JUrAhrhmbWoyB8fUb08uz5D6n5fQombBAGHxd89SMPZyv8AiyQMD137LTi6xdX0+PkTBQARkvzOauDVg0a1M1wjbVja4uHwnlHdaNj2vYHNIcD2I7KHZhgZLJXmlvvALAT8TXFxwP8Aim7T6tdljlkuAQEBwYe+QDt6b7/dfPTyEqOwTZjfnudwLC09dae2wYacXvzOeDgb8oUrivhyzJNFr+i5j1WoASG/uGgbtPmcfkbeS7jRq1a/imy2y5x5Q2Fwe5x8hhevh43PriOzee2wCWvEmA3AzuDurw5xFKq1Upubd7WEl0DrYyHw3o93XNTHFGvxlr/2VUg4ib8nYP8Aj8+ShadRn4b1i+zWbWqURPJzMu1GB8coyT7x5XEHfP8Atbh8MbInSGzewJjFvJjfzJ+Q9V8hkfh2ytn1Eh8vTwx+d/P1G3cL3DF17n8ex+ROJw4sN9xMlqbdN1ww04bnEGue+DiNjWtj/u5nMAC/RoGdOCNhLiWtAy85J2+fqosnRZSFrxV8xmQsxz4OxIzg/T6qpUpiuS4TzS8w7SOzhSa9RyAUsPsGdEp5Ln3OtCEKp0gkmhIiwjCaEiLCMJoSIsIwmhIiwjCaEiLCMJoSIsITQkQQhCRP/9k=</ImageData>
+      <MIMEType>image/jpeg</MIMEType>
+    </EmbeddedImage>
+    <EmbeddedImage Name="globelogo2">
+      <ImageData>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</ImageData>
+      <MIMEType>image/gif</MIMEType>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <DataSets>
+    <DataSet Name="dsAwardedItem_sp_GetAwardedItemReportDetails">
+      <rd:DataSetInfo>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:DataSetName>dsAwardedItem</rd:DataSetName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterName>sp_GetAwardedItemReportDetailsTableAdapter</rd:TableAdapterName>
+        <rd:TableName>sp_GetAwardedItemReportDetails</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>dbo.sp_GetAwardedItemReportDetails</CommandText>
+        <DataSourceName>EBidConnectionString</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="BidTenderNo">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>BidTenderNo</DataField>
+        </Field>
+        <Field Name="BidRefNo">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>BidRefNo</DataField>
+        </Field>
+        <Field Name="ItemDesc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemDesc</DataField>
+        </Field>
+        <Field Name="BidDetailNo">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>BidDetailNo</DataField>
+        </Field>
+        <Field Name="DetailDesc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DetailDesc</DataField>
+        </Field>
+        <Field Name="Requestor">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Requestor</DataField>
+        </Field>
+        <Field Name="BuyerId">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>BuyerId</DataField>
+        </Field>
+        <Field Name="EventCreator">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EventCreator</DataField>
+        </Field>
+        <Field Name="Company">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Company</DataField>
+        </Field>
+        <Field Name="Incoterm">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Incoterm</DataField>
+        </Field>
+        <Field Name="Currency">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Currency</DataField>
+        </Field>
+        <Field Name="Qty">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>Qty</DataField>
+        </Field>
+        <Field Name="UnitOfMeasure">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>UnitOfMeasure</DataField>
+        </Field>
+        <Field Name="DeliverTo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DeliverTo</DataField>
+        </Field>
+        <Field Name="DeliveryDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>DeliveryDate</DataField>
+        </Field>
+        <Field Name="BidPrice">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>BidPrice</DataField>
+        </Field>
+        <Field Name="Amount">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>Amount</DataField>
+        </Field>
+        <Field Name="DeliveryCost">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>DeliveryCost</DataField>
+        </Field>
+        <Field Name="Discount">
+          <rd:TypeName>System.Double</rd:TypeName>
+          <DataField>Discount</DataField>
+        </Field>
+        <Field Name="Warranty">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Warranty</DataField>
+        </Field>
+        <Field Name="Remarks">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Remarks</DataField>
+        </Field>
+        <Field Name="DateAwarded">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>DateAwarded</DataField>
+        </Field>
+        <Field Name="VendorId">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>VendorId</DataField>
+        </Field>
+        <Field Name="VendorName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>VendorName</DataField>
+        </Field>
+        <Field Name="VendorEmail">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>VendorEmail</DataField>
+        </Field>
+        <Field Name="MobileNo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>MobileNo</DataField>
+        </Field>
+        <Field Name="TelephoneNo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TelephoneNo</DataField>
+        </Field>
+        <Field Name="Fax">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Fax</DataField>
+        </Field>
+        <Field Name="VendorAddress">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>VendorAddress</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>6.6in</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>

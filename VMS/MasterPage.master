@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><asp:ContentPlaceHolder id="TitlePlaceHolder1" runat="server"></asp:ContentPlaceHolder></title>
+<script type="text/javascript" src="Scripts/jquery-latest.min.js"></script>
+<link href="Styles/ava.css" rel="stylesheet" type="text/css" media="screen" />
+    
+</head>
+
+<body>
+<div class="wrapper">
+<div class="header">
+<div class="header_inner">
+<div class="header_search">
+    </div>
+</div>
+</div><!-- header ends -->  
+<noscript>
+    <div style="background:#f00; text-align:center; color:#fff; font-size:12px; font-weight:bold; padding:10px;">
+        Javascript is disabled! For full functionality of site it is necessary to enable JavaScript.
+        </div>
+</noscript>
+<div style="text-align:center; color:#fff; font-size:12px; font-weight:bold; ">
+    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="1" height="1" id="movie_name" align="middle">
+    <param name="movie" value="plugins/uploadify/expressInstall.swf"/>
+    <!--[if !IE]>-->
+    <object type="application/x-shockwave-flash" data="plugins/uploadify/expressInstall.swf" width="1" height="1">
+        <param name="movie" value="plugins/uploadify/expressInstall.swf"/>
+    <!--<![endif]-->
+        <a href="http://www.adobe.com/go/getflash">
+            <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player"/>
+        </a><br />Flash player is not installed or enabled on your browser.
+    <!--[if !IE]>-->
+    </object>
+    <!--<![endif]-->
+</object>
+</div>
+<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+
+</asp:ContentPlaceHolder>
+<div class="push"></div> 
+</div><!-- wrapper ends -->
+<div class="footer">
+<div style="margin:auto; width:790px; padding-top:15px; text-align:" >
+11th Floor, PHINMA Plaza, 39 Plaza Drive, Rockwell Center, Makati City, 1200, Philippines | Tel: +63 2 8700100 | Fax: +63 2 8700448 
+</div>
+</div><!-- footer ends -->
+</body>
+</html>

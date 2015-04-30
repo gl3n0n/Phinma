@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="timer.aspx.cs" Inherits="web_usercontrol_buyer_timer" %>

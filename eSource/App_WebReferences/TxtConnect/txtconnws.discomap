@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <!--Ito yong luma-->
+    <!--<DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://10.225.80.74:81/webservices/txtconnws.asmx?disco" filename="txtconnws.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://10.225.80.74:81/webservices/txtconnws.asmx?wsdl" filename="txtconnws.wsdl" />-->
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="https://txtconnect.globesolutions.com.ph/webservice/txtconnws.asmx?disco" filename="txtconnws.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://txtconnect.globesolutions.com.ph/webservice/txtconnws.asmx?wsdl" filename="txtconnws.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>
